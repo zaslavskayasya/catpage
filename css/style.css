@@ -1,0 +1,186 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+#menu {
+    z-index: 70;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: #ffffff;
+
+}
+#menu li {
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 10px;
+    color: #000;
+    background: #fff;
+    background: rgba(183, 183, 183, 0.5);
+    -webkit-border-radius: 29px;
+    border-radius: 29px;
+}
+#menu li a, #menu li.active a {
+    padding: 9px 12px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 800;
+}
+#menu li.active {
+    background: #666;
+    background: rgba(0,0,0,.5);
+    color: red;
+}
+.home {
+    background: url('../img/bgcat.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.h1{
+    text-align: left;
+    margin-left: 17%;
+    display:none;
+    color: #fff;
+    float: left;
+    font-size: 60px;
+    background: rgba(183, 183, 183, 0.5);
+    padding: 20px 30px;
+    display: inline-block;
+    border-radius: 20px;
+
+}
+.dog {
+    background: url("../img/puppies1.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+.cat1{
+    background: url("../img/kitten1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.cat1 p {
+
+    display:none;
+    color: #fff;
+
+    font-size: 60px;
+
+    display: inline-block;
+    border-radius: 20px;
+}
+.cat2{
+    background: url("../img/kitten2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.cat3{
+    background: url("../img/kitten3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.cat4{
+    background: url("../img/kitten4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+    text-align:center;
+    overflow: hidden;
+}
+
+#myVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black; /* in case the video doesn't fit the whole page*/
+    /*background-image: !* our video *!;*/
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover; /*cover video background */
+    z-index:3;
+}
+
+
+
+/* Layer with position absolute in order to have it over the video
+* --------------------------------------- */
+#section0 .layer{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: -1000px;
+   bottom: 00px;
+
+    /*
+    * Preventing flicker on some browsers
+    * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+    */
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+#section0{
+    overflow: hidden;
+}
+
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+    color: #fff;
+}
+
+
+/* Hiding video controls
+* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+* --------------------------------------- */
+video::-webkit-media-controls {
+    display:none !important;
+}
+.btn{
+    display: inline-block;
+    font-size: 30px;
+    color: #ffffff;
+    background: rgba(183, 183, 183, 0.5);
+    -webkit-border-radius: 29px;
+    border-radius: 29px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+.btn:hover{
+    background: rgba(115, 114, 114, 0.5);
+}
+
+#home .btn-wrap{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: 0px;
+    bottom: 00px;
+
+    /*
+    * Preventing flicker on some browsers
+    * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+    */
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
